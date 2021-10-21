@@ -1,24 +1,19 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
+import { makeStyles, createTheme, ThemeProvider } from '@mui/material/styles';
+import customStyle from 'common/style/custom-style';
 import './App.css';
+import Routes from 'components/routes'
+const THEME = createTheme(customStyle());
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <ThemeProvider theme={THEME}>
+          <Base>
+            <Routes className={classes.routes}/>
+          </Base>
+      </ThemeProvider>
+    </React.Fragment>
   );
 }
 
