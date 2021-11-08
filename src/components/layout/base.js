@@ -2,9 +2,13 @@ import React from 'react';
 import { Container } from '@mui/material';
 import { styled } from '@mui/material/styles';
 
+
 const MyContainer = styled(Container)(
+    
     { 
-        padding: "0px!important"
+        padding: "0px!important",
+        backgroundColor: "aliceblue",
+        fontFamily: 'Ubuntu'
     }
 );
 

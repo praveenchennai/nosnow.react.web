@@ -5,13 +5,15 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
     root: {
-        opacity: 0.9,
-        background: "transparent",
-        position: "absolute"
+        // opacity: 0.9,
+        backgroundColor: "#002C5D",
+        // position: "absolute"
+        minHeight: "300px",
+        position:"relative",
     },
 });
 
-const Header = (props) => {
+const Footer = (props) => {
     const classes = useStyles();
     return (
         <React.Fragment>
@@ -28,4 +30,4 @@ const Header = (props) => {
     )
 }
 
-export default Header;
+export default Footer;
