@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, Grid, CardMedia, Container, Typography, CardContent, Divider} from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import createOverrides from './theme';
-import { lineHeight } from '@mui/system';
+import { createTheme } from "@mui/material/styles";
 
-const useStyles = makeStyles({
+const theme = createTheme();
+
+const useStyles = makeStyles(()=>({
     firstName:{
         fontSize: "170px",
         color: "#B91224!important",
@@ -24,7 +24,11 @@ const useStyles = makeStyles({
         
         position: "relative",
         top: "-120px",
-        bottom: "120px"
+        bottom: "120px",
+        [theme.breakpoints.down('md')]: {
+            top: "0px",
+            padding: "0"
+        },
     },
     title: {
         fontSize: "35px",
@@ -45,15 +49,38 @@ const useStyles = makeStyles({
     },
     para: {
         fontWeight: "bold"
+    },
+    para1: {
+        paddingTop: "10px",
+        textAlign: "justify",
+        color: "#000"
+    },
+    dpara: {
+        [theme.breakpoints.up('lg')]: {
+            display: "none"
+        },
     }
 
-});
+}));
 
 const Page1 = (props) => {
     const classes = useStyles();
     return (
         <Container maxWidth="lg" className={classes.page1}>
             <Card sx={{ minWidth: 275 }} elevation={9}>
+                <Grid container item md={12} className={classes.dpara}>
+                    <CardContent>
+                        <Typography variant={'body1'}  className={classes.para1}>
+                            Hundreds of thousands of people have escaped to The Sunshine State just in the past year, and can we blame them? The weather, the beaches... there isn't much not to love about our great stage of Florida. Longtime REALTOR Richard Palante was in the restaurant industry as a business owner in Northeast Pennsylvania before making his own grand escape to Florida over 35 years ago.
+                        </Typography>
+                        <Typography variant={'body1'} className={classes.para1}>
+                            Richard had no intentions of getting into real estate when he made the move to Naples. In fact, he and his wife opened up a new restaurant in Bonita Springs not long after settling. However, while selling his Pennslvania house, Richard's interest in the real estate industry was pipued by his agent, who saw qualities in Richard that would be a match made in heaven for real estate. So, once in Florida, the competitive guy he is, Richard eat down for an interview with a branch of Coldwell Banker, thus begining a brand new career that would open conuntless doors for him and his family. 
+                        </Typography>
+                        <Typography variant={'body1'} className={classes.para1}>
+                            His first month in business, June 1987, set the trafectory for how Richard's entire career would upfold. "I'm going to be your sales leader for this entire year," he told the managers at his new company. They laughed that off, of course, telling him they appreciated his tenacity but that his goal was too far-fetched. After all, he started in the middle of the year and would be competing against seasoned, top-producing agents.
+                        </Typography>
+                    </CardContent>
+                </Grid>
                 <Grid container item md={12} >
                     <Grid container item md={4} className={classes.pt10} direction="column">
                         <CardContent>

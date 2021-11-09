@@ -1,25 +1,13 @@
 import React from 'react';
-import { Card, Paper, Grid, CardMedia, CardContent, Typography, Link, Divider} from '@mui/material';
+import { Card, Paper, Grid, CardMedia, CardContent, Typography, Divider} from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import createOverrides from './theme';
+import { createTheme } from "@mui/material/styles";
 import Page1 from './page1'
-import { lineHeight } from '@mui/system';
 
-const baseTheme = createTheme({
-    components:{
-        MuiCardContent: {
-            styleOverrides: {
-                root: {
-                    position: 'absolute',
-                    fontFamily: "Ubuntu",
-                    top: 150
-                }
-            }
-        }
-    }});
 
-const useStyles = makeStyles({
+const theme = createTheme();
+
+const useStyles = makeStyles(()=>({
     root: {
       //background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
       border: 0,
@@ -31,6 +19,10 @@ const useStyles = makeStyles({
         fontSize: "120px",
         color: "#B91224!important",
         lineHeight: "0.6",
+        [theme.breakpoints.down('md')]: {
+            fontSize: "40px",
+            fontWeight: "bold"
+        },
     },
     page1: {
         position: "relative",
@@ -40,12 +32,28 @@ const useStyles = makeStyles({
         paddingLeft: "90px",
         color: "#000",
         fontSize: "90px",
+        [theme.breakpoints.down('md')]: {
+            fontSize: "40px",
+            fontWeight: "bold",
+            paddingLeft: "20px",
+        },
     },
     heading1:{
         position: 'absolute',
         top: 150
     },
     para:{
+        [theme.breakpoints.down('md')]: {
+            position: 'inherit',
+            fontSize: "20px",
+            fontWeight: "bold",
+            //padding: "10px",
+            margin: "0px",
+            width: "100vw",
+        },
+        [theme.breakpoints.down('xl')]: {
+            display: 'none'
+        },
         position: 'absolute',
         top: 440,
         backgroundColor: "#fff",
@@ -62,7 +70,10 @@ const useStyles = makeStyles({
         fontSize: "35px",
         fontWeight: "bold",
         color: "#B91224!important",
-        
+        [theme.breakpoints.down('md')]: {
+            fontSize: "16px",
+            fontWeight: "bold"
+        }
     },
     pt10: {
         paddingTop: "10px",
@@ -74,7 +85,7 @@ const useStyles = makeStyles({
         color: "#000"
     }
 
-});
+}));
 
 const Home = (props) => {
     const classes = useStyles();
@@ -94,7 +105,7 @@ const Home = (props) => {
                             <Divider className={classes.line} />
                         </CardContent>
                     </Grid>
-                    <Paper className={classes.para} elevation={4}>
+                    <Paper className={classes.para} elevation={4} >
                         <Typography variant={'body1'}  className={classes.para1}>
                             Hundreds of thousands of people have escaped to The Sunshine State just in the past year, and can we blame them? The weather, the beaches... there isn't much not to love about our great stage of Florida. Longtime REALTOR Richard Palante was in the restaurant industry as a business owner in Northeast Pennsylvania before making his own grand escape to Florida over 35 years ago.
                         </Typography>

@@ -20,7 +20,13 @@ const Header = (props) => {
                     <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>NoSnowNaples</Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
+                    {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Naples Real Estate</Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Naples Communities</Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Community LifeStyle</Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Real Estate Resource</Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Living In Naples</Typography>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>News</Typography> */}
                     <Button color="inherit">Search</Button>
                 </Toolbar>
             </AppBar>
