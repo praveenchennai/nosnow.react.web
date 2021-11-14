@@ -1,35 +1,57 @@
 import React from 'react';
-import { AppBar, Button, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Link, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import useMediaQuery from '@mui/material/useMediaQuery';
+import Drawer from '@mui/material/Drawer';
 import { makeStyles } from '@mui/styles';
+import LeftMenu from './layout/leftmenu'
+import { useTheme } from '@mui/material/styles';
 
 const useStyles = makeStyles({
     root: {
-        opacity: 0.9,
         background: "transparent",
         position: "absolute"
     },
+    paper: {
+      backgroundColor: "#002C5D",
+      color: "#fff",
+  },
+
 });
 
+
 const Header = (props) => {
+    const [state, setState] = React.useState(false);
     const classes = useStyles();
+    const theme = useTheme();
+    const bottom = useMediaQuery(theme.breakpoints.down('md'));
     return (
         <React.Fragment>
             <AppBar position="static" className={classes.root} elevation={0}>
                 <Toolbar>
-                    <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+                    <IconButton onClick={()=>setState(true)} size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
                         <MenuIcon />
                     </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                    {/* <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Naples Real Estate</Typography>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Naples Communities</Typography>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Community LifeStyle</Typography>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Real Estate Resource</Typography>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>Living In Naples</Typography>
-                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>News</Typography> */}
-                    <Button color="inherit">Search</Button>
-                </Toolbar>
+                        <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.facebook.com/NoSnowNaples/"><FacebookIcon /></Link></IconButton>
+                        <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://twitter.com/nosnownaples/"><TwitterIcon /></Link></IconButton>
+                        <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.instagram.com/nosnownaples/"><InstagramIcon /></Link></IconButton>
+                    </Toolbar>
             </AppBar>
+            <Drawer anchor={bottom?"bottom":"left"} open={state} onClose={()=>setState(false)} 
+              PaperProps={{
+                sx: {
+                  backgroundColor: "#002C5D",
+                  color: "#fff",
+                  fontWeight: "bold"
+                }
+              }}
+            >
+                <LeftMenu />
+            </Drawer>
         </React.Fragment>
     )
 }
