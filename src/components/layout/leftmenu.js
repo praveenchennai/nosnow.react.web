@@ -75,6 +75,20 @@ const LeftMenu = (anchor) => {
             ]
         },
     ])
+
+    const [menu2] = useState([
+        {
+            id: '1',
+            title: 'Living In Naples', 
+            onclick: 'https://content.nosnownaples.com', 
+        },
+        {
+            id: '2',
+            title: 'News', 
+            onclick: 'https://news.nosnownaples.com', 
+        }
+
+    ])
     
     return (
         <Box
@@ -149,19 +163,19 @@ const LeftMenu = (anchor) => {
             </List>
             <Divider sx={{borderColor: "rgba(255, 255, 255, 0.2)"}}/>
             <List>
-                {['Living In Naples', 'News'].map((text, index) => (
-                <ListItemButton key={index}>
+                {menu2.map((text, index) => (
+                <ListItemButton key={index} onClick={() => window.open(text.onclick, '_blank')}>
                     <ListItemIcon sx={{color:"#fff", minWidth:40}}>
                         <KeyboardArrowDown sx={{transform: 'rotate(-90deg)'}}/>
                     </ListItemIcon>
-                    <ListItemText primary={text} />
+                    <ListItemText primary={text.title} />
                 </ListItemButton>
 
                 ))}
             </List>
             <List>
                 {['Property Search'].map((text, index) => (
-                <ListItemButton key={index} sx={{backgroundColor: "#0174f5"}}>
+                <ListItemButton key={index} sx={{backgroundColor: "#0174f5"}} onClick={() => window.open("https://www.nosnownaples.com/search", '_blank')}>
                     <ListItemIcon sx={{color:"#fff", minWidth:40}}>
                         <AddIcon />
                     </ListItemIcon>
