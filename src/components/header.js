@@ -19,7 +19,6 @@ const useStyles = makeStyles({
       backgroundColor: "#002C5D",
       color: "#fff",
   },
-
 });
 
 
@@ -35,10 +34,65 @@ const Header = (props) => {
                     <IconButton onClick={()=>setState(true)} size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
                         <MenuIcon />
                     </IconButton>
+                    <Typography
+                        sx={{
+                            fontSize: "18px",
+                            fontWeight: "bold",
+                            color: "#fff!important",
+                            [theme.breakpoints.down('md')]: {
+                                fontSize: "16px",
+                                fontWeight: "bold"
+                            }
+                        }}
+                    >
+                        The Parlante Group
+                    </Typography>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                        <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.facebook.com/NoSnowNaples/"><FacebookIcon /></Link></IconButton>
-                        <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://twitter.com/nosnownaples/"><TwitterIcon /></Link></IconButton>
-                        <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.instagram.com/nosnownaples/"><InstagramIcon /></Link></IconButton>
+                    <Typography
+                        sx={{
+                            fontSize: "18px",
+                            fontWeight: "bold",
+                            color: "#fff!important",
+                            [theme.breakpoints.down('md')]: {
+                                fontSize: "16px",
+                                fontWeight: "bold"
+                            }
+                        }}
+                    >
+                        I want to list
+                    </Typography>
+                    <Typography
+                        sx={{
+                            fontSize: "18px",
+                            marginLeft: "35px",
+                            fontWeight: "bold",
+                            color: "#fff!important",
+                            [theme.breakpoints.down('md')]: {
+                                fontSize: "16px",
+                                fontWeight: "bold"
+                            }
+                        }}
+                    >
+                        My Listing Expired
+                    </Typography>
+                    <Typography
+                        sx={{
+                            fontSize: "18px",
+                            marginLeft: "35px",
+                            marginRight: "35px",
+                            fontWeight: "bold",
+                            color: "#fff!important",
+                            [theme.breakpoints.down('md')]: {
+                                fontSize: "16px",
+                                fontWeight: "bold"
+                            }
+                        }}
+                    >
+                        For Sale By Owner
+                    </Typography>
+                    <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.facebook.com/NoSnowNaples/"><FacebookIcon /></Link></IconButton>
+                    <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://twitter.com/nosnownaples/"><TwitterIcon /></Link></IconButton>
+                    <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.instagram.com/nosnownaples/"><InstagramIcon /></Link></IconButton>
                     </Toolbar>
             </AppBar>
             <Drawer anchor={bottom?"bottom":"left"} open={state} onClose={()=>setState(false)} 
