@@ -346,6 +346,11 @@ export const listingCss = () =>{
             marginTop: 0,
             boxShadow: "none",
             borderRadius: 0,
+            backgroundColor: "#000",
+            img: {
+                backgroundColor: "#000",
+                opacity: ".5"
+            }
           },
           media: {
             height: 240,

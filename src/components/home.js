@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Paper, Grid, CardMedia, CardContent, Typography, Divider} from '@mui/material';
+import { Card, Paper, Grid, Button, Stack, CardContent, Typography, Divider} from '@mui/material';
 import { makeStyles } from '@mui/styles';
 import { createTheme } from "@mui/material/styles";
 import Page1 from './page1'
@@ -14,15 +14,6 @@ const useStyles = makeStyles(()=>({
       color: 'white',
       width: "100vw",
       top: 0,
-    },
-    firstName:{
-        fontSize: "120px",
-        color: "#B91224!important",
-        lineHeight: "0.6",
-        [theme.breakpoints.down('md')]: {
-            fontSize: "40px",
-            fontWeight: "bold"
-        },
     },
     page1: {
         position: "relative",
@@ -67,9 +58,9 @@ const useStyles = makeStyles(()=>({
         borderColor: "#B91224!important"
     },
     title: {
-        fontSize: "35px",
+        fontSize: "50px",
         fontWeight: "bold",
-        color: "#B91224!important",
+        color: "#fff!important",
         [theme.breakpoints.down('md')]: {
             fontSize: "16px",
             fontWeight: "bold"
@@ -91,35 +82,142 @@ const Home = (props) => {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Card>
-                <CardMedia className={classes.root} component="img"
-                    src="https://nosnow-news-pdfs.s3.us-west-2.amazonaws.com/rickhome.webp"
-                    alt="Rick Parlante"
+            <Stack
+                direction="column" 
+                spacing={3}
+                alignItems="center" 
+                sx={{
+                    height: "100vh",
+                    backgroundColor: "#000"
+                }}
+            >
+                <Paper 
+                    sx={{
+                        backgroundImage: "url(https://nosnow-news-pdfs.s3.us-west-2.amazonaws.com/listinghome.webp)",
+                        minHeight: "100vh",
+                        backgroundRepeat: "no-repeat",
+                        opacity: ".5",
+                        width: "100%",
+                        height: "100%",
+                        backgroundPositionY: "-140px"
+                    }}
                 />
-                <Grid container item md={12} direction="column">
-                    <Grid container item md={6}>
-                        <CardContent className={classes.heading1}>
-                            <Typography variant={'h1'} className={classes.firstName}>RICK</Typography>
-                            <Typography variant={'h2'} className={classes.lastName}>PARLANTE</Typography>
-                            <Typography variant={'body1'} className={classes.title}>Playing to Hit his Strengths</Typography>
-                            <Divider className={classes.line} />
-                        </CardContent>
+                <Grid container item md={12}
+                    sx={{
+                        position: 'absolute',
+                        top: 150
+                    }}
+                >
+                    <Grid container item md={5} />
+                    <Grid container item md={5} >
+                        <Typography
+                            sx={{
+                                fontSize: "50px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            Sell your Naples property for the best profit and at the right time.
+                        </Typography>
+                        <Typography
+                            sx={{
+                                fontSize: "20px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            Southwest Florida Real Estate Team specilizing in supporting the Seller.
+                        </Typography>
                     </Grid>
-                    <Paper className={classes.para} elevation={4} >
-                        <Typography variant={'body1'}  className={classes.para1}>
-                            Hundreds of thousands of people have escaped to The Sunshine State just in the past year, and can we blame them? The weather, the beaches... there isn't much not to love about our great stage of Florida. Longtime REALTOR Richard Palante was in the restaurant industry as a business owner in Northeast Pennsylvania before making his own grand escape to Florida over 35 years ago.
-                        </Typography>
-                        <Typography variant={'body1'} className={classes.para1}>
-                            Richard had no intentions of getting into real estate when he made the move to Naples. In fact, he and his wife opened up a new restaurant in Bonita Springs not long after settling. However, while selling his Pennslvania house, Richard's interest in the real estate industry was pipued by his agent, who saw qualities in Richard that would be a match made in heaven for real estate. So, once in Florida, the competitive guy he is, Richard eat down for an interview with a branch of Coldwell Banker, thus begining a brand new career that would open conuntless doors for him and his family. 
-                        </Typography>
-                        <Typography variant={'body1'} className={classes.para1}>
-                            His first month in business, June 1987, set the trafectory for how Richard's entire career would upfold. "I'm going to be your sales leader for this entire year," he told the managers at his new company. They laughed that off, of course, telling him they appreciated his tenacity but that his goal was too far-fetched. After all, he started in the middle of the year and would be competing against seasoned, top-producing agents.
-                        </Typography>
-                    </Paper>
+                    <Grid container item md={2} />
                 </Grid>
-            </Card>
-            <Page1 className={classes.page1}/>
+                <Grid container item md={12}
+                    sx={{
+                        position: 'absolute',
+                        top: 350
+                    }}
+                >
+                    <Grid container item md={5} />
+                    <Grid container item md={5} spacing={2}>
+                        <Grid container item md={4}>
+                            <Button fullWidth color="warning" variant='contained'>Get Listed</Button>
+                        </Grid>
+                        <Grid container item md={4}>
+                            <Button fullWidth color="primary" variant='contained'>Browse Properties</Button>
+                        </Grid>
+                        <Grid container item md={4}>                            
+                            <Button fullWidth color="warning" variant='contained'>What's your home worth?</Button>
+                        </Grid>
+                    </Grid>
+                    <Grid container item md={2} />
+                </Grid>
+                <Grid container item md={12}
+                    sx={{
+                        position: 'absolute',
+                        bottom: 50
+                    }}
+                >
+                     <Grid container item md={2} />
+                    <Grid container item md={2}>
+                        <Typography
+                            sx={{
+                                fontSize: "18px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            Advanced MLS tools to help buyers find your property
+                        </Typography>
+                    </Grid>
+                    <Grid container item md={1} />
+                    <Grid container item md={2} >
+                        <Typography
+                            sx={{
+                                fontSize: "18px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            Clear and consistent communication to keep you in the loop
+                        </Typography>
+                    </Grid>
+                    <Grid container item md={1} />
+                    <Grid container item md={2} >
+                        <Typography
+                            sx={{
+                                fontSize: "18px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            Marketing that makes and keeps you more net profit
+                        </Typography>
+                    </Grid>
+                    
+                </Grid>
+            </Stack>
         </React.Fragment>
+        
     )
 }
 
