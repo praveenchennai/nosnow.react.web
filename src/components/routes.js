@@ -4,6 +4,10 @@ import Header from './header';
 import Footer from './footer';
 
 const Home = lazy(() => import('components/home'));
+const GetListed = lazy(() => import('components/get-listed'));
+const Fsbo = lazy(() => import('components/fsbo'));
+const ListingExpired = lazy(() => import('components/listing-expired'));
+
 
 const Routes = (props) => {
 
@@ -14,6 +18,9 @@ const Routes = (props) => {
                 <Suspense fallback={<div />}>
                     <Switch>
                         <Route path="/" render = {()=><Home />} exact/>
+                        <Route path="/get-listed" render = {()=><GetListed />} exact/>
+                        <Route path="/fsbo" render = {()=><Fsbo />} exact/>
+                        <Route path="/listing-expired" render = {()=><ListingExpired />} exact/>
                     </Switch>
                 </Suspense>
             </BrowserRouter>
