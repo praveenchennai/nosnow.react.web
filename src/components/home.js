@@ -76,10 +76,16 @@ const Home = (props) => {
                             <Button fullWidth color="warning" variant='contained'>Get Listed</Button>
                         </Grid>
                         <Grid container item md={4}>
-                            <Button fullWidth color="primary" variant='contained'>Browse Properties</Button>
+                            <Button fullWidth color="primary" variant='contained'
+                            target="_blank" href="https://www.nosnownaples.com/search">Browse Properties</Button>
                         </Grid>
                         <Grid container item md={4}>                            
-                            <Button fullWidth color="warning" variant='contained'>What's your home worth?</Button>
+                            <Button 
+                                fullWidth 
+                                color="warning" 
+                                variant='contained'
+                                target="_blank" href="http://www.nosnowevalue.com/"
+                            >What's your home worth?</Button>
                         </Grid>
                     </Grid>
                     <Grid container item md={2} />
