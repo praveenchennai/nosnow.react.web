@@ -22,16 +22,26 @@ const useStyles = makeStyles({
 });
 
 
+
+
 const Header = (props) => {
+    console.log('props', props)
     const [state, setState] = React.useState(false);
     const classes = useStyles();
     const theme = useTheme();
     const bottom = useMediaQuery(theme.breakpoints.down('md'));
+    const leftmenus = (r) =>{
+        setState(r);
+    }
     return (
         <React.Fragment>
-            <AppBar position="static" className={classes.root} elevation={0}>
+            <AppBar position="sticky" className={classes.root} elevation={0}>
                 <Toolbar>
-                    <IconButton onClick={()=>setState(true)} size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+                    <IconButton onClick={()=>leftmenus(true)} size="large" edge="start" color="inherit" aria-label="menu" 
+                        sx={{ 
+                            mr: 2,
+                        }}
+                    >
                         <MenuIcon />
                     </IconButton>
                     <Typography
@@ -104,7 +114,7 @@ const Header = (props) => {
                 }
               }}
             >
-                <LeftMenu />
+                <LeftMenu value={props}/>
             </Drawer>
         </React.Fragment>
     )
