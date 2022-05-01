@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Link, IconButton, Toolbar, Typography } from '@mui/material';
+import { AppBar, Link, Button, IconButton, Toolbar, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -44,62 +44,83 @@ const Header = (props) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Typography
-                        sx={{
-                            fontSize: "18px",
-                            fontWeight: "bold",
-                            color: "#fff!important",
-                            [theme.breakpoints.down('md')]: {
-                                fontSize: "16px",
-                                fontWeight: "bold"
-                            }
-                        }}
-                    >
-                        The Parlante Group
-                    </Typography>
+                    <Button variant='text'>
+                        <Typography
+                            sx={{
+                                fontSize: "18px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                "text-transform": "capitalize",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            The Parlante Group
+                        </Typography>
+                    </Button>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
-                    <Typography
+                    <Button color="warning" variant='contained'
                         sx={{
-                            fontSize: "18px",
-                            fontWeight: "bold",
-                            color: "#fff!important",
-                            [theme.breakpoints.down('md')]: {
-                                fontSize: "16px",
-                                fontWeight: "bold"
-                            }
+                            marginLeft: "15px",
+                            marginRight: "15px",
                         }}
                     >
-                        I want to list
-                    </Typography>
-                    <Typography
+                        <Typography
+                            sx={{
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            I want to list
+                        </Typography>
+                    </Button>
+                    <Button color="primary" variant='contained'
                         sx={{
-                            fontSize: "18px",
-                            marginLeft: "35px",
-                            fontWeight: "bold",
-                            color: "#fff!important",
-                            [theme.breakpoints.down('md')]: {
-                                fontSize: "16px",
-                                fontWeight: "bold"
-                            }
+                            marginLeft: "15px",
+                            marginRight: "15px",
                         }}
                     >
-                        My Listing Expired
-                    </Typography>
-                    <Typography
+                        <Typography
+                            sx={{
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            My Listing Expired
+                        </Typography>
+                    </Button>
+                    <Button color="warning" variant='contained' 
                         sx={{
-                            fontSize: "18px",
-                            marginLeft: "35px",
-                            marginRight: "35px",
-                            fontWeight: "bold",
-                            color: "#fff!important",
-                            [theme.breakpoints.down('md')]: {
-                                fontSize: "16px",
-                                fontWeight: "bold"
-                            }
+                            marginLeft: "15px",
+                            marginRight: "15px",
                         }}
                     >
-                        For Sale By Owner
-                    </Typography>
+                        <Typography
+                            sx={{
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            For Sale By Owner
+                        </Typography>
+                    </Button>
                     <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.facebook.com/NoSnowNaples/"><FacebookIcon /></Link></IconButton>
                     <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://twitter.com/nosnownaples/"><TwitterIcon /></Link></IconButton>
                     <IconButton color="inherit" size="large"><Link color="inherit" target="_blank" href="https://www.instagram.com/nosnownaples/"><InstagramIcon /></Link></IconButton>

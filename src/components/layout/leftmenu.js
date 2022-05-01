@@ -120,17 +120,17 @@ const LeftMenu = (anchor) => {
         {
             id: '1',
             title: 'I want to list', 
-            onclick: 'https://content.nosnownaples.com', 
+            onclick: '/get-listed', 
         },
         {
             id: '2',
             title: 'My Listing Expired', 
-            onclick: 'https://news.nosnownaples.com', 
+            onclick: '/listing-expired', 
         },
         {
             id: '3',
             title: 'For Sale By Owner', 
-            onclick: 'https://news.nosnownaples.com', 
+            onclick: '/fsbo', 
         }
 
     ])
@@ -151,42 +151,41 @@ const LeftMenu = (anchor) => {
             <Divider sx={{borderColor: "rgba(255, 255, 255, 0.2)"}}/>
             <List>
                 {menu2.map((text, index) => (
-                <ListItemButton key={index} onClick={() => window.open(text.onclick, '_blank')}>
-                    <ListItemIcon sx={{color:"#fff", minWidth:40}}>
-                        <KeyboardArrowDown sx={{transform: 'rotate(-90deg)'}}/>
-                    </ListItemIcon>
-                    <ListItemText primary={text.title} />
-                </ListItemButton>
-
+                    <ListItemButton key={index} onClick={() => window.open(text.onclick, '_blank')}>
+                        <ListItemIcon sx={{color:"#fff", minWidth:40}}>
+                            <KeyboardArrowDown sx={{transform: 'rotate(-90deg)'}}/>
+                        </ListItemIcon>
+                        <ListItemText primary={text.title} />
+                    </ListItemButton>
                 ))}
             </List>
             <Divider sx={{borderColor: "rgba(255, 255, 255, 0.2)"}}/>
             <List>
                 {menus.map((text, index) => (
                     <React.Fragment key={index}>
-                    <ListItemButton 
-                        sx={{ height: 56 }}  
-                        onClick={()=>setOpen(open===text.id?'':text.id)}
-                    >
-                        <ListItemIcon sx={{color:"#fff", minWidth:40}}>
-                            {text.id===open?<RemoveIcon />:<AddIcon />}
-                        </ListItemIcon>
-                        <ListItemText 
-                            primary={text.title} 
-                            primaryTypographyProps={{
-                                color: '#fff',
-                                fontWeight: 'medium',
-                                variant: 'body1',
-                            }}
-                        />
-                        <KeyboardArrowDown
-                            sx={{
-                                mr: -1,
-                                opacity: 0,
-                                transition: '0.2s',
-                            }}
-                        />
-                    </ListItemButton >
+                        <ListItemButton 
+                            sx={{ height: 56 }}  
+                            onClick={()=>setOpen(open===text.id?'':text.id)}
+                        >
+                            <ListItemIcon sx={{color:"#fff", minWidth:40}}>
+                                {text.id===open?<RemoveIcon />:<AddIcon />}
+                            </ListItemIcon>
+                            <ListItemText 
+                                primary={text.title} 
+                                primaryTypographyProps={{
+                                    color: '#fff',
+                                    fontWeight: 'medium',
+                                    variant: 'body1',
+                                }}
+                            />
+                            <KeyboardArrowDown
+                                sx={{
+                                    mr: -1,
+                                    opacity: 0,
+                                    transition: '0.2s',
+                                }}
+                            />
+                        </ListItemButton >
                         {open===text.id && text.subMenu.map((item, i) => (
                             <ListItemButton 
                                 key={i}
