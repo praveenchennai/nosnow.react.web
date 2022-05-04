@@ -66,6 +66,7 @@ const Header = (props) => {
                             marginLeft: "15px",
                             marginRight: "15px",
                         }}
+                        target="_blank" href="https://www.nosnownaples.com/get-listed"
                     >
                         <Typography
                             sx={{
@@ -86,6 +87,7 @@ const Header = (props) => {
                             marginLeft: "15px",
                             marginRight: "15px",
                         }}
+                        target="_blank" href="https://www.nosnownaples.com/listing-expired"
                     >
                         <Typography
                             sx={{
@@ -106,6 +108,7 @@ const Header = (props) => {
                             marginLeft: "15px",
                             marginRight: "15px",
                         }}
+                        target="_blank" href="https://www.nosnownaples.com/fsbo"
                     >
                         <Typography
                             sx={{
