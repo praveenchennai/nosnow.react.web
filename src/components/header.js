@@ -66,7 +66,7 @@ const Header = (props) => {
                             marginLeft: "15px",
                             marginRight: "15px",
                         }}
-                        target="_blank" href="https://www.nosnownaples.com/get-listed"
+                        target="_blank" href="https://d2o3r9nzolqdpo.cloudfront.net/get-listed"
                     >
                         <Typography
                             sx={{
@@ -87,7 +87,7 @@ const Header = (props) => {
                             marginLeft: "15px",
                             marginRight: "15px",
                         }}
-                        target="_blank" href="https://www.nosnownaples.com/listing-expired"
+                        target="_blank" href="https://d2o3r9nzolqdpo.cloudfront.net/listing-expired"
                     >
                         <Typography
                             sx={{
@@ -108,7 +108,7 @@ const Header = (props) => {
                             marginLeft: "15px",
                             marginRight: "15px",
                         }}
-                        target="_blank" href="https://www.nosnownaples.com/fsbo"
+                        target="_blank" href="https://d2o3r9nzolqdpo.cloudfront.net/fsbo"
                     >
                         <Typography
                             sx={{
