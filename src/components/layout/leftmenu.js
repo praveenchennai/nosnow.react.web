@@ -5,9 +5,11 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import KeyboardArrowDown from '@mui/icons-material/KeyboardArrowDown';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { useHistory } from "react-router-dom";
 
 const LeftMenu = (anchor) => {
     const toggleDrawer = (anchor, a) =>{}
+    const navi = useHistory();
     const [open, setOpen] = useState(false)
     const [menus] = useState([
         {
@@ -196,7 +198,8 @@ const LeftMenu = (anchor) => {
                                     color: 'rgba(255,255,255,.8)',
                                     backgroundColor: "#024591",
                                 }}
-                                onClick={() => window.open(item.onclick, '_blank')}
+                                // onClick={() => window.open(item.onclick, '_blank')}
+                                onClick={()=>navi.push(item.onclick)}
                             >
                                 
                                     <ListItemIcon>

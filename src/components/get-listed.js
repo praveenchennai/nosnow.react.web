@@ -33,15 +33,15 @@ const Home = (props) => {
                         top: 150
                     }}
                 >
-                    <Grid container item md={5} />
-                    <Grid container item md={5} >
+                    <Grid container item md={5} xs={1}/>
+                    <Grid container item md={5} xs={10}>
                         <Typography
                             sx={{
                                 fontSize: "50px",
                                 fontWeight: "bold",
                                 color: "#fff!important",
-                                [theme.breakpoints.down('md')]: {
-                                    fontSize: "16px",
+                                [theme.breakpoints.down('xl')]: {
+                                    fontSize: "30px",
                                     fontWeight: "bold"
                                 }
                             }}
@@ -53,7 +53,7 @@ const Home = (props) => {
                                 fontSize: "20px",
                                 fontWeight: "bold",
                                 color: "#fff!important",
-                                [theme.breakpoints.down('md')]: {
+                                [theme.breakpoints.down('lg')]: {
                                     fontSize: "16px",
                                     fontWeight: "bold"
                                 }
@@ -70,10 +70,15 @@ const Home = (props) => {
                         top: 350
                     }}
                 >
-                    <Grid container item md={5} />
-                    <Grid container item md={5} spacing={2}>
+                    <Grid container item md={5} xs={1}/>
+                    <Grid container item md={5} xs={10} spacing={2}>
                         <Grid container item md={4}>
-                            <Button fullWidth color="warning" variant='contained'>Get Listed</Button>
+                            <Button 
+                                fullWidth 
+                                color="warning" 
+                                variant='contained'>
+                                Get Listed
+                            </Button>
                         </Grid>
                     </Grid>
                     <Grid container item md={2} />
@@ -84,7 +89,7 @@ const Home = (props) => {
                         bottom: 50
                     }}
                 >
-                     <Grid container item md={2} />
+                    <Grid container item md={2} />
                     <Grid container item md={2}>
                         <Typography
                             sx={{
@@ -93,15 +98,17 @@ const Home = (props) => {
                                 color: "#fff!important",
                                 [theme.breakpoints.down('md')]: {
                                     fontSize: "16px",
-                                    fontWeight: "bold"
+                                    fontWeight: "bold",
+                                    margin: "10px"
                                 }
                             }}
+                            align="center"
                         >
                             Advanced MLS tools to help buyers find your property
                         </Typography>
                     </Grid>
                     <Grid container item md={1} />
-                    <Grid container item md={2} >
+                    <Grid container item md={2}>
                         <Typography
                             sx={{
                                 fontSize: "18px",
@@ -109,15 +116,17 @@ const Home = (props) => {
                                 color: "#fff!important",
                                 [theme.breakpoints.down('md')]: {
                                     fontSize: "16px",
-                                    fontWeight: "bold"
+                                    fontWeight: "bold",
+                                    margin: "10px"
                                 }
                             }}
+                            align="center"
                         >
                             Clear and consistent communication to keep you in the loop
                         </Typography>
                     </Grid>
                     <Grid container item md={1} />
-                    <Grid container item md={2} >
+                    <Grid container item md={2}>
                         <Typography
                             sx={{
                                 fontSize: "18px",
@@ -125,9 +134,11 @@ const Home = (props) => {
                                 color: "#fff!important",
                                 [theme.breakpoints.down('md')]: {
                                     fontSize: "16px",
-                                    fontWeight: "bold"
+                                    fontWeight: "bold",
+                                    margin: "10px"
                                 }
                             }}
+                            align="center"
                         >
                             Marketing that makes and keeps you more net profit
                         </Typography>
