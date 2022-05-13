@@ -13,8 +13,8 @@ const Routes = (props) => {
 
     return (
         <React.Fragment>
-            <Header {...props}/>
             <BrowserRouter>
+                <Header {...props}/>
                 <Suspense fallback={<div />}>
                     <Switch>
                         <Route path="/" render = {()=><Home />} exact/>
