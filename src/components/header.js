@@ -65,6 +65,28 @@ const Header = (props) => {
                     </Button>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                     {!mdDown?<React.Fragment>
+
+                    <Button color="warning" variant='outlined'
+                        sx={{
+                            marginLeft: "15px",
+                            marginRight: "15px",
+                        }}
+                        onClick={()=>navi.push('/')}
+                    >
+                        <Typography
+                            sx={{
+                                fontSize: "13px",
+                                fontWeight: "bold",
+                                color: "#fff!important",
+                                [theme.breakpoints.down('md')]: {
+                                    fontSize: "16px",
+                                    fontWeight: "bold"
+                                }
+                            }}
+                        >
+                            Home
+                        </Typography>
+                    </Button>
                     
                     <Button color="warning" variant='contained'
                         sx={{
