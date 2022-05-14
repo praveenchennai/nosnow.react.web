@@ -2,6 +2,7 @@ import React from 'react';
 import { Paper, Grid, Button, Stack, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import { useHistory } from "react-router-dom";
+import  HomeBottomText from "./home-text";
 
 const theme = createTheme();
 
@@ -90,7 +91,7 @@ const Home = (props) => {
                                 variant='contained'
                                 target="_blank" href="http://www.nosnownaples.com/search"
                             >
-                                    Browse Properties
+                                Browse Properties
                             </Button>
                         </Grid>
                         <Grid container item md={4}>                            
@@ -106,68 +107,7 @@ const Home = (props) => {
                     </Grid>
                     <Grid container item md={2} />
                 </Grid>
-                <Grid container item md={12}
-                    sx={{
-                        position: 'absolute',
-                        bottom: 50
-                    }}
-                >
-                    <Grid container item md={2} />
-                    <Grid container item md={2}>
-                        <Typography
-                            sx={{
-                                fontSize: "18px",
-                                fontWeight: "bold",
-                                color: "#fff!important",
-                                [theme.breakpoints.down('md')]: {
-                                    fontSize: "16px",
-                                    fontWeight: "bold",
-                                    margin: "10px"
-                                }
-                            }}
-                            align="center"
-                        >
-                            Advanced MLS tools to help buyers find your property
-                        </Typography>
-                    </Grid>
-                    <Grid container item md={1} />
-                    <Grid container item md={2}>
-                        <Typography
-                            sx={{
-                                fontSize: "18px",
-                                fontWeight: "bold",
-                                color: "#fff!important",
-                                [theme.breakpoints.down('md')]: {
-                                    fontSize: "16px",
-                                    fontWeight: "bold",
-                                    margin: "10px"
-                                }
-                            }}
-                            align="center"
-                        >
-                            Clear and consistent communication to keep you in the loop
-                        </Typography>
-                    </Grid>
-                    <Grid container item md={1} />
-                    <Grid container item md={2}>
-                        <Typography
-                            sx={{
-                                fontSize: "18px",
-                                fontWeight: "bold",
-                                color: "#fff!important",
-                                [theme.breakpoints.down('md')]: {
-                                    fontSize: "16px",
-                                    fontWeight: "bold",
-                                    margin: "10px"
-                                }
-                            }}
-                            align="center"
-                        >
-                            Marketing that makes and keeps you more net profit
-                        </Typography>
-                    </Grid>
-                    
-                </Grid>
+                <HomeBottomText />
             </Stack>
         </React.Fragment>
         
