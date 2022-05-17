@@ -47,22 +47,22 @@ const Header = (props) => {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Button variant='text' onClick={()=>navi.push('/')}>
-                        <Typography
-                            sx={{
-                                fontSize: "18px",
-                                fontWeight: "bold",
-                                color: "#fff!important",
-                                "text-transform": "capitalize",
-                                [theme.breakpoints.down('md')]: {
-                                    fontSize: "16px",
-                                    fontWeight: "bold"
-                                }
-                            }}
-                        >
-                            The Parlante Group
-                        </Typography>
-                    </Button>
+                    <IconButton 
+                        onClick={()=>navi.push('/')} size="large" 
+                        edge="start" color="inherit" aria-label="menu" 
+                        disableRipple
+                        sx={{ 
+                            mr: 2,
+                            display: { xs: 'none', sm: 'block' }
+                        }}>
+                        <img
+                            src={`https://nosnow-news-pdfs.s3.us-west-2.amazonaws.com/nosnowsells-logo.webp`}
+                            alt="NoSnowSells logo"
+                            loading="lazy"
+                            width="250px"
+                            height= "auto"
+                        />
+                    </IconButton>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}></Typography>
                     {!mdDown?<React.Fragment>
 

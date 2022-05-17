@@ -1,0 +1,29 @@
+{
+    "dataSet": {
+        "prod": "nabor",
+        "dev": "nabor"
+    },
+    "api": {
+        "clientId": "k2sa6UnfIekErm4PQIlY",
+        "clientSecret": "BETNoFwPG0rHamdQLl0ftrnwrbJKngJAtOiKkRa8",
+        "serverToken": "ae13665c856618147065afe8237a0f61",
+        "browserToken": "e84a669c4e19bed167fa72fef8982002",
+        "google": "AIzaSyAgV5Jp5V353fQ-khx1wKX2s4vx-xbb3zQ",
+        "apiUrl": "https://api.bridgedataoutput.com/api/v2/",
+        "username": "rick@nosnownaples.com",
+        "password": "calltoPRAVEEN"
+    },
+    "userPool": {
+        "REGION": "us-west-2",
+        "USER_POOL_ID": "us-west-2_dGfsmnQEI",
+        "APP_CLIENT_ID": "12qmg655pb4arl5lit01eekkv",
+        "identityPoolId": "us-west-2:6be5f9df-3b38-4569-b20e-1322c0df8897",
+        "USER_POOL": "nosnowsells",
+        "IDENTITY_POOL": "nosnowsells"
+    },
+    "stage": {
+        "prod": [
+            { "type": "lambda", "service": "mail-service", "apiId": "odo6txvsg8", "region": "us-west-2" }   
+        ]
+    }
+}

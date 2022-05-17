@@ -1,14 +1,26 @@
-import React from 'react';
-import { Paper, Grid, Button, Stack, Typography} from '@mui/material';
+import React, {useState} from 'react';
+import { Paper, Grid, Button, Stack, Dialog, Snackbar, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
-import { useHistory } from "react-router-dom";
 import  HomeBottomText from "./home-text";
+import ContactPopUp from './contact/contact-popup';
 
 const theme = createTheme();
 
 const Home = (props) => {
+    const [popUp, setPopUp] = useState(false);
+    const [snackBar, setSnackBar] = useState(false);
 
-    const navi = useHistory();
+    var value = {
+        popUp: popUp,
+        setPopUp: setPopUp,
+        snackBar: snackBar,
+        setSnackBar: setSnackBar
+    }
+    
+    const handleClose = () =>{
+        setSnackBar(false)
+    }
+    
     return (
         <React.Fragment>
             <Stack
@@ -81,7 +93,7 @@ const Home = (props) => {
                                 fullWidth 
                                 color="warning" 
                                 variant='contained'
-                                onClick={()=>navi.push('/get-listed')}
+                                onClick={()=>setPopUp(true)}
                             >Get Listed</Button>
                         </Grid>
                         <Grid container item md={4}>
@@ -109,6 +121,14 @@ const Home = (props) => {
                 </Grid>
                 <HomeBottomText />
             </Stack>
+            <Dialog 
+                onClose={()=>setPopUp(false)} 
+                open={popUp}
+                scroll={"body"}
+            >
+                <ContactPopUp {...value}/>
+            </Dialog>
+            <Snackbar  open={snackBar}  autoHideDuration={3000}  onClose={handleClose}  message="Thank you for your Comments/Question. We will contact you shortly!!" />
         </React.Fragment>
         
     )

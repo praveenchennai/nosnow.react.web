@@ -2,12 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import store from './app/store'
+import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals';
+import * as service from './service';
+var configs = service.config()
 
 ReactDOM.render(
+  <Provider store={store}> 
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App configs={configs}/>
+  </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 
