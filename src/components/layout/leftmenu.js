@@ -35,13 +35,13 @@ const LeftMenu = (anchor) => {
             icon: 'add_circle',
             subMenu: [
                 {title: 'View All Communities', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/communities'},
-                {title: 'Ave Maria', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/community/ave-maria' },
-                {title: 'Verona Walk', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/community/verona-walk'},
-                {title: 'Imperial Golf Estates', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/community/imperial-golf-estates'},
-                {title: 'Orange Blossom Ranch', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/community/orange-blossom-ranch'},
-                {title: 'Indigo Lakes', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/community/indigo-lakes'  },
-                {title: 'Golden Gate Lakes', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/community/golden-gate-estates'  },
-                {title: 'Naples Farm Sites', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/community/naples-farm-sites'}
+                {title: 'Ave Maria', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/community/ave-maria' },
+                {title: 'Verona Walk', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/community/verona-walk'},
+                {title: 'Imperial Golf Estates', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/community/imperial-golf-estates'},
+                {title: 'Orange Blossom Ranch', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/community/orange-blossom-ranch'},
+                {title: 'Indigo Lakes', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/community/indigo-lakes'  },
+                {title: 'Golden Gate Lakes', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/community/golden-gate-estates'  },
+                {title: 'Naples Farm Sites', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/community/naples-farm-sites'}
             ]
         },
         {
@@ -52,12 +52,12 @@ const LeftMenu = (anchor) => {
             admin: true, 
             icon: 'add_circle',
             subMenu: [
-                {title: 'Gated Communities', secTitle: '', onclick: 'https://nosnownaples.com/community/group/naples-bonita-springs-estero-gated-communities'},
-                {title: 'Non-Gated Communities', secTitle: '', onclick: 'https://nosnownaples.com/community/group/naples-bonita-springs-estero-non-gated-communities' },
-                {title: 'Golf Communities', secTitle: '', onclick: 'https://nosnownaples.com/community/group/golf-communities-naples-real-estate'},
-                {title: 'Beach Front Condos', secTitle: '', onclick: 'https://nosnownaples.com/community/group/beach-front-condo-sunset-water-views-naples-real-estate'},
-                {title: 'Estate Homes', secTitle: '', onclick: 'https://nosnownaples.com/community/group/estate-homes-are-for-more-space-naples-real-estate'},
-                {title: 'Community Lifestyle', secTitle: '', onclick: '/https://nosnownaples.com/community/group'}
+                {title: 'Gated Communities', secTitle: '', onclick: 'https://www.nosnownaples.com/community/group/naples-bonita-springs-estero-gated-communities'},
+                {title: 'Non-Gated Communities', secTitle: '', onclick: 'https://www.nosnownaples.com/community/group/naples-bonita-springs-estero-non-gated-communities' },
+                {title: 'Golf Communities', secTitle: '', onclick: 'https://www.nosnownaples.com/community/group/golf-communities-naples-real-estate'},
+                {title: 'Beach Front Condos', secTitle: '', onclick: 'https://www.nosnownaples.com/community/group/beach-front-condo-sunset-water-views-naples-real-estate'},
+                {title: 'Estate Homes', secTitle: '', onclick: 'https://www.nosnownaples.com/community/group/estate-homes-are-for-more-space-naples-real-estate'},
+                {title: 'Community Lifestyle', secTitle: '', onclick: '/https://www.nosnownaples.com/community/group'}
             ]
         },
         {
@@ -68,12 +68,12 @@ const LeftMenu = (anchor) => {
             admin: true, 
             icon: 'add_circle',
             subMenu: [
-                {title: 'About the Parlante Group', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/content/about'},
-                {title: 'Rick Parlante in the News', secTitle: '', onclick: 'https://rick.nosnownaples.com' },
-                {title: 'Parlante Group Video', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/content/parlante-video' },
-                {title: 'Real Estate Special Report', secTitle: '', onclick: 'https://news.nosnownaples.com'},
-                {title: 'Whats Your Home Worth?', secTitle: '', onclick: 'http://www.nosnowevalue.com/'},
-                {title: 'Mortgage Calculator', secTitle: '', useNavi: true, onclick: 'https://www.nosnownaples.com/content/tcalc'}
+                {title: 'About the Parlante Group', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/content/about'},
+                {title: 'Rick Parlante in the News', secTitle: '', useNavi: false, onclick: 'https://rick.nosnownaples.com' },
+                {title: 'Parlante Group Video', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/content/parlante-video' },
+                {title: 'Real Estate Special Report', secTitle: '', useNavi: false,  onclick: 'https://news.nosnownaples.com'},
+                {title: 'Whats Your Home Worth?', secTitle: '', useNavi: false,  onclick: 'http://www.nosnowevalue.com/'},
+                {title: 'Mortgage Calculator', secTitle: '', useNavi: false, onclick: 'https://www.nosnownaples.com/content/tcalc'}
             ]
         },
         {
@@ -137,6 +137,14 @@ const LeftMenu = (anchor) => {
         }
 
     ])
+
+    const handleLeftMenu = (item) => {
+        if(item.useNavi){
+            navi.push(item.onclick)
+        } else {
+            window.open(item.onclick, '_blank')
+        }
+    }
     
     return (
         <Box
@@ -144,11 +152,13 @@ const LeftMenu = (anchor) => {
           onClick={toggleDrawer(anchor, false)}
           onKeyDown={toggleDrawer(anchor, false)}
         >
-            <List sx={{ paddingLeft: 2 }}>
+            <List sx={{ height: 56 }}>
                 <img
-                    src={`https://nosnow-news-pdfs.s3.us-west-2.amazonaws.com/nosnowlogo.webp`}
-                    alt="Nosnownaples logo"
+                    src={`https://nosnow-news-pdfs.s3.us-west-2.amazonaws.com/nosnowsells-logo.webp`}
+                    alt="NoSnowSells logo"
                     loading="lazy"
+                    width="auto"
+                    height= "56px"
                 />
             </List>
             <Divider sx={{borderColor: "rgba(255, 255, 255, 0.2)"}}/>
@@ -198,8 +208,7 @@ const LeftMenu = (anchor) => {
                                     color: 'rgba(255,255,255,.8)',
                                     backgroundColor: "#024591",
                                 }}
-                                // onClick={() => window.open(item.onclick, '_blank')}
-                                onClick={()=>navi.push(item.onclick)}
+                                onClick={()=>handleLeftMenu(item)}
                             >
                                 
                                     <ListItemIcon>
