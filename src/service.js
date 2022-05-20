@@ -67,7 +67,6 @@ export const register = async (reg) =>{
             "custom:taxId": reg.taxId || ''
         }
     }
-    console.log(signUpParams)
     
 
     return Auth.signUp(signUpParams)
@@ -75,9 +74,7 @@ export const register = async (reg) =>{
         return user;
     })
     .catch(error=>{
-        console.log(error.code)
-        console.log(error)
-        throw error.code;
+        return 'done with error';
     })
 }
 

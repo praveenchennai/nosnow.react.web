@@ -137,7 +137,7 @@ const ContactCard = () => {
             >
                 <ContactPopUp {...value}/>
             </Dialog>
-            <Snackbar  open={snackBar}  autoHideDuration={3000}  onClose={handleClose}  message="Thank you for your Comments/Question. We will contact you shortly!!" />
+            <Snackbar  open={snackBar}  autoHideDuration={3000}  onClose={handleClose}  message="Thank you for your interest. We will contact you shortly!!" />
         </Card>
     );
 }

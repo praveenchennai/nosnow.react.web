@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { Grid, Button, Stack, Dialog, Snackbar, Typography} from '@mui/material';
+import { Grid, Button, Stack, Dialog, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import ContactPopUp from './contact/contact-popup';
 
@@ -7,19 +7,12 @@ const theme = createTheme();
 
 const MiddleContent = (props) => {
     const [popUp, setPopUp] = useState(false);
-    const [snackBar, setSnackBar] = useState(false);
-
     var value = {
         popUp: popUp,
-        setPopUp: setPopUp,
-        snackBar: snackBar,
-        setSnackBar: setSnackBar
+        setPopUp: setPopUp
     }
     
-    const handleClose = () =>{
-        setSnackBar(false)
-    }
-    
+   
     return (
         <React.Fragment>
             <Stack
@@ -125,7 +118,6 @@ const MiddleContent = (props) => {
             >
                 <ContactPopUp {...value}/>
             </Dialog>
-            <Snackbar  open={snackBar}  autoHideDuration={3000}  onClose={handleClose}  message="Thank you for your Comments/Question. We will contact you shortly!!" />
         </React.Fragment>
         
     )
