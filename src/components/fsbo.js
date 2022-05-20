@@ -2,7 +2,7 @@ import React from 'react';
 import { Paper, Grid, Button, Stack, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import  HomeBottomText from "./home-text";
-
+import FsboMiddleContent from './fsbo-middle-content'
 const theme = createTheme();
 
 const Fsbo = (props) => {
@@ -82,6 +82,7 @@ const Fsbo = (props) => {
                 </Grid>
                 <HomeBottomText />
             </Stack>
+            <FsboMiddleContent />
         </React.Fragment>
         
     )

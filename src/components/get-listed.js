@@ -1,11 +1,27 @@
-import React from 'react';
-import { Paper, Grid, Button, Stack, Typography} from '@mui/material';
+import React, {useState} from 'react';
+import { Paper, Grid, Button, Stack, Typography, Dialog, Snackbar} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import  HomeBottomText from "./home-text";
+import GetListedMiddleContent from './get-listed-middle-content'
+import ContactPopUp from './contact/contact-popup';
 
 const theme = createTheme();
 
 const Home = (props) => {
+    const [popUp, setPopUp] = useState(false);
+    const [snackBar, setSnackBar] = useState(false);
+
+    var value = {
+        popUp: popUp,
+        setPopUp: setPopUp,
+        snackBar: snackBar,
+        setSnackBar: setSnackBar
+    }
+    
+    const handleClose = () =>{
+        setSnackBar(false)
+    }
+
     return (
         <React.Fragment>
             <Stack
@@ -77,7 +93,9 @@ const Home = (props) => {
                             <Button 
                                 fullWidth 
                                 color="warning" 
-                                variant='contained'>
+                                variant='contained'
+                                onClick={()=>setPopUp(true)}
+                                >
                                 Get Listed
                             </Button>
                         </Grid>
@@ -86,6 +104,15 @@ const Home = (props) => {
                 </Grid>
                 <HomeBottomText />
             </Stack>
+            <GetListedMiddleContent />
+            <Dialog 
+                onClose={()=>setPopUp(false)} 
+                open={popUp}
+                scroll={"body"}
+            >
+                <ContactPopUp {...value}/>
+            </Dialog>
+            <Snackbar  open={snackBar}  autoHideDuration={3000}  onClose={handleClose}  message="Thank you for your Comments/Question. We will contact you shortly!!" />
         </React.Fragment>
         
     )

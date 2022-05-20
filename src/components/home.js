@@ -3,7 +3,7 @@ import { Paper, Grid, Button, Stack, Dialog, Snackbar, Typography} from '@mui/ma
 import { createTheme } from "@mui/material/styles";
 import  HomeBottomText from "./home-text";
 import ContactPopUp from './contact/contact-popup';
-import MiddleContent from './middle-content'
+import MiddleContent from './home-middle-content'
 
 const theme = createTheme();
 

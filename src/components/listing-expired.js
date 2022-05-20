@@ -2,6 +2,7 @@ import React from 'react';
 import { Paper, Grid, Button, Stack, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import  HomeBottomText from "./home-text";
+import ListingExpiredMiddleContent from './listing-expired-middle-content'
 
 const theme = createTheme();
 
@@ -86,6 +87,7 @@ const Home = (props) => {
                 </Grid>
                 <HomeBottomText />
             </Stack>
+            <ListingExpiredMiddleContent />
         </React.Fragment>
         
     )

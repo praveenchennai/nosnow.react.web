@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@mui/styles';
 import { listingCss } from 'common/style/style';
-import { TextField, Paper , Toolbar, AppBar, Button, Typography } from '@mui/material';
+import { TextField, Paper , Toolbar, AppBar, Button, Snackbar, Typography } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux'
 import * as service from '../../service';
 import * as googleService from '../../services/google';
@@ -9,7 +9,8 @@ import { setRegister } from 'api/auth';
 const useStyles = makeStyles(listingCss());
 
 const ContactPopUp = (props) => { 
-    const {setPopUp, setSnackBar} = props;
+    const {setPopUp} = props;
+    const [snackBarOpen, setSnackBarOpen] = useState(false);
     const classes = useStyles();
     const register = useSelector(state=>state.auth.register);
     const dispatch = useDispatch();
@@ -43,12 +44,10 @@ const ContactPopUp = (props) => {
     }
 
     const onZipChange = (event) =>{
-        console.log(event.target.value)
         if(event.target.value.length===5){
             dispatch(setRegister({zip: event.target.value}))
             googleService.getAddressByZipGoogle(event.target.value)
             .then(result=>{
-                console.log(result)
                 dispatch(setRegister({address: result.address}));
             })
             .catch(error=>{
@@ -77,13 +76,16 @@ const ContactPopUp = (props) => {
         setDisableButton(true);
         service.register(register)
         .then(result=>{
-            console.log(result)
-            setSnackBar(true)
+            setSnackBarOpen(true)
         })
         .catch(error=>{
-            if(error==='UsernameExistsException'){
-            }
+            setSnackBarOpen(true)
         })
+    }
+
+    const handleClose = () =>{
+        setSnackBarOpen(false)
+        setPopUp(false)
     }
 
     
@@ -236,6 +238,7 @@ return (
                 {loading?'Please Wait...' : 'Send'}
             </Button>
         </Paper>
+        <Snackbar  open={snackBarOpen}  autoHideDuration={3000}  onClose={handleClose}  message="Thank you for your Interest. We will contact you shortly!!" />
     </React.Fragment>
 
 )}
