@@ -1,14 +1,17 @@
 import React from 'react';
 import { Grid, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const theme = createTheme();
 
 
 const HomeBottomText = (props) => {
+    const xsUp = useMediaQuery(theme.breakpoints.up('sm'));
     
     return (
-        <Grid container item md={12}
+        <React.Fragment>
+        {xsUp?<Grid container item md={12}
             sx={{
                 position: 'absolute',
                 bottom: 50
@@ -68,7 +71,8 @@ const HomeBottomText = (props) => {
                     Marketing that makes and keeps you more net profit
                 </Typography>
             </Grid>
-        </Grid>
+        </Grid>:''}
+        </React.Fragment>
     )
 }
 
