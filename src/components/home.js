@@ -47,7 +47,10 @@ const Home = (props) => {
                 <Grid container item md={12}
                     sx={{
                         position: 'absolute',
-                        top: 150
+                        top: 150,
+                        [theme.breakpoints.down('sm')]: {
+                            top: 50,
+                        }
                     }}
                 >
                     <Grid container item md={5} xs={1}/>
