@@ -82,7 +82,7 @@ const FsboMiddleContent = (props) => {
                                 }
                             }}
                         >
-                            Sure, commissions do cut into your profit...but the question is how big is the profit in the first place? In most cases, we can get you more net dollars by listing with us. We also listed a property for $1,500,000 and sold it for $1,835,000. That's a 16.2% increase after commissions.
+                            Sure, commissions do cut into your profit...but the question is how big is the profit in the first place? In most cases, we can get you more net dollars by listing with us. We recently listed a property for $535,000 and sold it for $650,000. That's a 14% increase - even after commissions.We also listed a property for $1,500,000 and sold it for $1,835,000. That's a 16.2% increase after commissions.
                         </Typography>
                         <Typography
                             sx={{
