@@ -26,24 +26,30 @@ const Fsbo = (props) => {
                         width: "100%",
                         height: "100%",
                         backgroundPositionY: "-440px",
-                        backgroundPositionX: "-340px"
+                        backgroundPositionX: "-340px",
+                        [theme.breakpoints.down('sm')]: {
+                            backgroundPositionX: "-440px"
+                        }
                     }}
                 />
                 <Grid container item md={12}
                     sx={{
                         position: 'absolute',
-                        top: 150
+                        top: 150,
+                        [theme.breakpoints.down('sm')]: {
+                            top: 100,
+                        }
                     }}
                 >
-                    <Grid container item md={5} />
-                    <Grid container item md={5} >
+                    <Grid container item md={5} xs={1}/>
+                    <Grid container item md={5} xs={10}>
                         <Typography
                             sx={{
                                 fontSize: "50px",
                                 fontWeight: "bold",
                                 color: "#fff!important",
                                 [theme.breakpoints.down('md')]: {
-                                    fontSize: "16px",
+                                    fontSize: "30px",
                                     fontWeight: "bold"
                                 }
                             }}
@@ -64,7 +70,7 @@ const Fsbo = (props) => {
                             Helping sellers decide it For Sale by Owner is the right strategy.
                         </Typography>
                     </Grid>
-                    <Grid container item md={2} />
+                    <Grid container item md={2} xs={1}/>
                 </Grid>
                 <Grid container item md={12}
                     sx={{
@@ -72,13 +78,23 @@ const Fsbo = (props) => {
                         top: 350
                     }}
                 >
-                    <Grid container item md={5} />
-                    <Grid container item md={5} spacing={2}>
+                    <Grid container item md={5} xs={1}/>
+                    <Grid container item md={5} spacing={2} xs={10}>
                         <Grid container item md={4}>
                             <Button fullWidth color="warning" variant='contained'>Get Listed</Button>
                         </Grid>
+                        <Grid container item md={4}>                            
+                            <Button 
+                                fullWidth 
+                                color="warning" 
+                                variant='contained'
+                                target="_blank" href="http://www.nosnowevalue.com/"
+                            >
+                                What's your home worth?
+                            </Button>
+                        </Grid>
                     </Grid>
-                    <Grid container item md={2} />
+                    <Grid container item md={2} xs={1}/>
                 </Grid>
                 <HomeBottomText />
             </Stack>

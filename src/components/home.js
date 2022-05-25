@@ -41,7 +41,10 @@ const Home = (props) => {
                         opacity: ".5",
                         width: "100%",
                         height: "100%",
-                        backgroundPositionY: "-140px"
+                        backgroundPositionY: "-140px",
+                        [theme.breakpoints.down('sm')]: {
+                            backgroundPositionX: "-300px"
+                        }
                     }}
                 />
                 <Grid container item md={12}

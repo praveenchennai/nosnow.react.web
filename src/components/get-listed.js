@@ -41,13 +41,19 @@ const Home = (props) => {
                         opacity: ".5",
                         width: "100%",
                         height: "100%",
-                        backgroundPositionY: "-50px"
+                        backgroundPositionY: "-50px",
+                        [theme.breakpoints.down('sm')]: {
+                            backgroundPositionX: "-250px"
+                        }
                     }}
                 />
                 <Grid container item md={12}
                     sx={{
                         position: 'absolute',
-                        top: 280
+                        top: 280,
+                        [theme.breakpoints.down('sm')]: {
+                            top: 100,
+                        }
                     }}
                 >
                     <Grid container item md={5} xs={1}/>
@@ -97,6 +103,16 @@ const Home = (props) => {
                                 onClick={()=>setPopUp(true)}
                                 >
                                 Get Listed
+                            </Button>
+                        </Grid>
+                        <Grid container item md={4}>                            
+                            <Button 
+                                fullWidth 
+                                color="warning" 
+                                variant='contained'
+                                target="_blank" href="http://www.nosnowevalue.com/"
+                            >
+                                What's your home worth?
                             </Button>
                         </Grid>
                     </Grid>
