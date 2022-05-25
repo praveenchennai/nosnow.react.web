@@ -42,6 +42,7 @@ const GetListedMiddleContent = (props) => {
                         </Typography>
                     </Grid>
                     <Grid container item md={5} xs={1}/>
+                    <Grid container item md={5} xs={1}/>
                     <Grid container item md={5} xs={10}>
                         <Typography
                             sx={{

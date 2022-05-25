@@ -56,6 +56,7 @@ const FsboMiddleContent = (props) => {
                         </Typography>
                     </Grid>
                     <Grid container item md={5} xs={1}/>
+                    <Grid container item md={5} xs={1}/>
                     <Grid container item md={5} xs={10}>
                         <Typography
                             sx={{
@@ -133,7 +134,7 @@ const FsboMiddleContent = (props) => {
                                 }
                             }}
                         >
-                            Taking your own protos and writing your own description might save you some dollars - but potential buyers can usually spot it right away. Having the right team take care of these things for you is a very valuable investment to get you top dollars.
+                            Taking your own protos and writing your own description might save you some dollars - but potential buyers can usually spot it right away. Having the right team take care of these things for you is a very valuable investment to get you top dollar.
                         </Typography>
                         <Typography
                             sx={{
@@ -174,7 +175,7 @@ const FsboMiddleContent = (props) => {
                                 }
                             }}
                         >
-                            Anybody knowns how to market, right?
+                            Anybody knows how to market, right?
                         </Typography>
                         <Typography
                             sx={{

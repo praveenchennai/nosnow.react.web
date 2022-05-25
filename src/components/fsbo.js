@@ -67,7 +67,7 @@ const Fsbo = (props) => {
                                 }
                             }}
                         >
-                            Helping sellers decide it For Sale by Owner is the right strategy.
+                            Helping sellers decide if For Sale by Owner is the right strategy.
                         </Typography>
                     </Grid>
                     <Grid container item md={2} xs={1}/>
