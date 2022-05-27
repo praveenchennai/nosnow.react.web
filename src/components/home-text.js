@@ -7,11 +7,11 @@ const theme = createTheme();
 
 
 const HomeBottomText = (props) => {
-    const xsUp = useMediaQuery(theme.breakpoints.up('sm'));
+    const xsUp = useMediaQuery(theme.breakpoints.down('md'));
     
     return (
         <React.Fragment>
-        {xsUp?<Grid container item md={12}
+        {!xsUp?<Grid container item md={12}
             sx={{
                 position: 'absolute',
                 bottom: 50
