@@ -3,7 +3,7 @@ import { Paper, Grid, Button, Stack, Dialog, Snackbar, Typography} from '@mui/ma
 import { createTheme } from "@mui/material/styles";
 import  HomeBottomText from "./home-text";
 import ContactPopUp from './contact/contact-popup';
-import MiddleContent from './home-middle-content'
+import MiddleContent from './middle-content'
 
 const theme = createTheme();
 
@@ -108,7 +108,7 @@ const Home = (props) => {
                                 fullWidth 
                                 color="primary" 
                                 variant='contained'
-                                target="_blank" href="http://www.nosnownaples.com/search"
+                                target="_blank" href="http://www.nosnownaples.com"
                             >
                                 Browse Properties
                             </Button>
@@ -129,7 +129,7 @@ const Home = (props) => {
                 <HomeBottomText />
                 
             </Stack>
-            <MiddleContent />
+            <MiddleContent value={{page: 'home'}}/>
             <Dialog 
                 onClose={()=>setPopUp(false)} 
                 open={popUp}

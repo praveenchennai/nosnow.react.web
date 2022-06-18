@@ -2,7 +2,8 @@ import React from 'react';
 import { Paper, Grid, Button, Stack, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import  HomeBottomText from "./home-text";
-import FsboMiddleContent from './fsbo-middle-content'
+import MiddleContent from './middle-content';
+
 const theme = createTheme();
 
 const Fsbo = (props) => {
@@ -83,6 +84,16 @@ const Fsbo = (props) => {
                         <Grid container item md={4}>
                             <Button fullWidth color="warning" variant='contained'>Get Listed</Button>
                         </Grid>
+                        <Grid container item md={4}>
+                            <Button 
+                                fullWidth 
+                                color="primary" 
+                                variant='contained'
+                                target="_blank" href="http://www.nosnownaples.com"
+                            >
+                                Browse Properties
+                            </Button>
+                        </Grid>
                         <Grid container item md={4}>                            
                             <Button 
                                 fullWidth 
@@ -98,7 +109,7 @@ const Fsbo = (props) => {
                 </Grid>
                 <HomeBottomText />
             </Stack>
-            <FsboMiddleContent />
+            <MiddleContent value={{page: 'fsbo'}}/>
         </React.Fragment>
         
     )

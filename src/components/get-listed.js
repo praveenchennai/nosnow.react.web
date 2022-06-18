@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import { Paper, Grid, Button, Stack, Typography, Dialog, Snackbar} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import  HomeBottomText from "./home-text";
-import GetListedMiddleContent from './get-listed-middle-content'
 import ContactPopUp from './contact/contact-popup';
+import MiddleContent from './middle-content'
 
 const theme = createTheme();
 
@@ -105,6 +105,16 @@ const Home = (props) => {
                                 Get Listed
                             </Button>
                         </Grid>
+                        <Grid container item md={4}>
+                            <Button 
+                                fullWidth 
+                                color="primary" 
+                                variant='contained'
+                                target="_blank" href="http://www.nosnownaples.com"
+                            >
+                                Browse Properties
+                            </Button>
+                        </Grid>
                         <Grid container item md={4}>                            
                             <Button 
                                 fullWidth 
@@ -120,7 +130,7 @@ const Home = (props) => {
                 </Grid>
                 <HomeBottomText />
             </Stack>
-            <GetListedMiddleContent />
+            <MiddleContent value={{page: 'get-listed'}}/>
             <Dialog 
                 onClose={()=>setPopUp(false)} 
                 open={popUp}
