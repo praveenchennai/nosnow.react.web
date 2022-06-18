@@ -25,5 +25,97 @@
         "prod": [
             { "type": "lambda", "service": "mail-service", "apiId": "odo6txvsg8", "region": "us-west-2" }   
         ]
+    },
+    "middleContent": {
+        "home": {
+            "title": "Tried of the cookie*-cutter real estate sales approach?",
+            "para": [
+                "Yard signs, open houses, some flyers, MLS Listing...",
+                "...here is to hoping the right buyer will stumble in and fall in love with the over-hyped countertops in the property description.",
+                "What's the REAL reason buyers end up buying your house?",
+                "Tried of the cookie*-cutter real estate sales approach?",
+                "*speaking of cookies... don't get us started on the fresh baked cookies smell at the open house that will magically get people to buy"
+            ]
+        },
+        "get-listed": {
+            "title": "How are our listings different?",
+            
+            "para": [
+                {
+                    "title": "The right pricing.",
+                    "content": "We don't determine the price. They buyers do. 80% of the successful marketing of your home happens when you set the price right."
+                },
+                {
+                    "title": "Correct analysis of comparables and recent sales.",
+                    "content": "We don't just take a random average of your zip code or neighborhoods around your property. We compare Apples to Apples and consider a wide range of factors to determine the right strategy for your listings."
+                },
+                {
+                    "title": "Focus on what really matters.",
+                    "content": "Most buyers ultimately decide on a property because of the location, neighborhood, and lifestyle choices - not granite countertops and paint."
+                },
+                {
+                    "title": "No Autopilot Marketing",
+                    "content": "We go beyond lawn-signs, newspaper, open houses, and MLS listings.We believe marketing should be clearly measurable... not just based on home and luck."
+                }
+            ]
+        },
+        "listing-expired":{
+            "title": "Your listing not getting any traction?",
+            "title2": "Feel like giving up? Don't!",
+            "para": [
+                {
+                    "title": "Let's talk about sales and pricing strategy.",
+                    "content": "It's often the simple things - like pricing and a solid marketing strategy to move a home. Let's take a deep dive and see where things might have been missed."
+                },
+                {
+                    "title": "Are you competing in the right space?",
+                    "content": "Listing your home is such a personal experience. It's easy to look at your home in a different way than a typical buyer does. We can help bring clarity and help you complete with the right comparables."
+                },
+                {
+                    "title": "Focus on what really matters.",
+                    "content": "Most buyers ultimately decide on a property because of the location, neighborhood, and lifestyle choices - not granite countertops and paint."
+                },
+                {
+                    "title": "Barking up the wrong tree?",
+                    "content": "Most marketing takes a cookie-cutter approach that tends to spend marketing dollars in all the wrong places. Let's create a strategy and ensure maximum impact for your money."
+                },
+                {
+                    "title": "Never split the difference.",
+                    "content": "Negotiating can be a tough exercise sometimes. Our responsive and experienced team brings know-how and the right tactics to the table."
+                }
+            ]
+        },
+        "fsbo":{
+            "title": "Sure, you can try to handle the sale of your home yourself.",
+            "title2":"After all, you get to keep more money that way. Right?",
+            "para": [
+                {
+                    "title":"Are you really keeping the most net dollars?",
+                    "content": "Sure, commissions do cut into your profit...but the question is how big is the profit in the first place? In most cases, we can get you more net dollars by listing with us. We recently listed a property for $535,000 and sold it for $650,000. That's a 14% increase - even after commissions.We also listed a property for $1,500,000 and sold it for $1,835,000. That's a 16.2% increase after commissions."
+                },
+                {
+                    "title":"Do you know the right price strategy?",
+                    "content": "Listing your home in such a personal experience. It's easy to over - or undervalue your home and either sell it too fast for too little or sit on your listing too long due to the wrong pricing. We can help you price it just right."
+                },
+                {
+                    "title":"Are you presenting your property in the right light?",
+                    "content": "Taking your own protos and writing your own description might save you some dollars - but potential buyers can usually spot it right away. Having the right team take care of these things for you is a very valuable investment to get you top dollar."
+                },
+                {
+                    "title":"Barking up the wrong tree?",
+                    "content": "Most marketing takes a cookie-cutter approach that tends to spend marketing dollars in all the wrong places. Let's create a strategy and ensure maximum impact for your money."
+                },
+                {
+                    "title":"Anybody knows how to market, right?",
+                    "content": "Sure, you can post on Facebook and create some flyers. But will those work? The professional marketing team at the Parlante Group has the experience and strategy to get your listing the attention you deserve."
+                },
+                {
+                    "title":"Have you thought of the buyer and what they need?",
+                    "content": "Buyers get the services of real estate professional for free. Agents know the entire inventory versus only one home. They will comparison shop for the buyer, give advice, negotiate the contract, handle inspections, closings & escrow all for free. The question becomes why would a buyer want to take that on?"
+                }
+
+            ]
+        }
+
     }
 }

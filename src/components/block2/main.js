@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import { Grid, Button, Stack, Dialog, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
-import ContactPopUp from './contact/contact-popup';
+import ContactPopUp from '../contact/contact-popup';
 
 const theme = createTheme();
 
-const MiddleContent = (props) => {
+const MainBlock2 = (props) => {
     const [popUp, setPopUp] = useState(false);
     var value = {
         popUp: popUp,
@@ -123,4 +123,4 @@ const MiddleContent = (props) => {
     )
 }
 
-export default MiddleContent;
+export default MainBlock2;
