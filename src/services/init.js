@@ -14,6 +14,11 @@ const getContent = (name) =>{
     return {data: middleContent};
 }
 
+const getTestimonials = () =>{
+    var testimonials = Config.testimonials;
+    return {data: testimonials};
+}
+
 const rawBaseQuery = fetchBaseQuery({
     baseUrl: '/'
 });
@@ -22,6 +27,8 @@ const dynamicBaseQuery = async (args, api, extraOptions) =>{
     switch(args.service){
         case 'content-service':
             return getContent(args.name);
+        case 'testimonials-service':
+            return getTestimonials();            
         default:
             const adjustedUrl = getBaseUrl(args.service) + args.url;
             const adjustedArgs =  typeof args === 'string' ? adjustedUrl : { ...args, url: adjustedUrl };
@@ -38,6 +45,6 @@ const dynamicBaseQuery = async (args, api, extraOptions) =>{
 // initialize an empty api service that we'll inject endpoints into later as needed
 export const initSplitApi = createApi({
     baseQuery: dynamicBaseQuery,
-    tagTypes: ['Mail', 'Share', 'tmp', 'content'],
+    tagTypes: ['Mail', 'Share', 'tmp', 'content', 'testimonials'],
     endpoints: () => ({}),
 })
