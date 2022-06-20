@@ -32,7 +32,10 @@ const Header = (props) => {
     const [state, setState] = React.useState(false);
     const classes = useStyles();
     
-    
+    const value = {
+        ...props,
+        setState: setState
+    }
     const leftmenus = (r) =>{
         setState(r);
     }
@@ -166,7 +169,7 @@ const Header = (props) => {
                 }
               }}
             >
-                <LeftMenu value={props}/>
+                <LeftMenu value={value}/>
             </Drawer>
         </React.Fragment>
     )
