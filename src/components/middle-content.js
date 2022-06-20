@@ -57,7 +57,6 @@ const MiddleContent = (props) => {
                                 {content?.title || ''}
                             </Typography>
                             <Typography
-                                fullWidth
                                 sx={{
                                     fontSize: "30px",
                                     fontWeight: "bold",

@@ -1,7 +1,7 @@
 import React from 'react';
 import Base from './components/layout/base'
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import './App.css';
+// import './App.css';
 import Routes from 'components/routes'
 import customStyle from './common/style/custom-style';
 
