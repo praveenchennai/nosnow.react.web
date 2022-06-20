@@ -136,6 +136,11 @@ const LeftMenu = (anchor) => {
             id: '3',
             title: 'For Sale By Owner', 
             onclick: '/fsbo', 
+        },
+        {
+            id: '4',
+            title: 'Testimonials', 
+            onclick: '/testimonials', 
         }
 
     ])
@@ -166,7 +171,7 @@ const LeftMenu = (anchor) => {
             <Divider sx={{borderColor: "rgba(255, 255, 255, 0.2)"}}/>
             <List>
                 {menu2.map((text, index) => (
-                    <ListItemButton key={index} onClick={() => window.open(text.onclick, '_blank')}>
+                    <ListItemButton key={index} onClick={() => navi.push(text.onClick)}>
                         <ListItemIcon sx={{color:"#fff", minWidth:40}}>
                             <KeyboardArrowDown sx={{transform: 'rotate(-90deg)'}}/>
                         </ListItemIcon>

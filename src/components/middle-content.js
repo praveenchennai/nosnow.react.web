@@ -3,10 +3,12 @@ import { Grid, Button, Stack, Dialog, Typography} from '@mui/material';
 import { createTheme } from "@mui/material/styles";
 import ContactPopUp from './contact/contact-popup';
 import { useContentQuery } from 'services/content';
+import { useHistory } from "react-router-dom";
 
 const theme = createTheme();
 
 const MiddleContent = (props) => {
+    const navi = useHistory();
     const [popUp, setPopUp] = useState(false);
     const { page }= props.value;
     var value = {
@@ -128,6 +130,14 @@ const MiddleContent = (props) => {
                                     margin: "20px"
                                 }}
                             >Get Listed</Button>
+                            <Button 
+                                color="warning" 
+                                variant='contained'
+                                onClick={()=>navi.push('/testimonials')}
+                                sx={{
+                                    margin: "20px"
+                                }}
+                            >Testimonials</Button>
                         </Grid>
                     </Grid>
                     <Grid container item md={3} xs={1}/>

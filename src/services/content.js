@@ -13,11 +13,22 @@ export const contentAPI = initSplitApi.injectEndpoints({
                 }
             },
             providesTags: ['content']
+        }),
+        testimonials: builder.query({
+            query: () => {
+                return {
+                    url: ``,
+                    method: 'GET',
+                    service: 'testimonials-service'
+                }
+            },
+            providesTags: ['testimonials']
         })
     }),
     overrideExisting: false
 })
 
 export const { 
-    useContentQuery
+    useContentQuery,
+    useTestimonialsQuery
 } = contentAPI
