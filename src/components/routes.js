@@ -8,6 +8,7 @@ const GetListed = lazy(() => import('components/get-listed'));
 const Fsbo = lazy(() => import('components/fsbo'));
 const ListingExpired = lazy(() => import('components/listing-expired'));
 const Testimonials = lazy(() => import('components/testimonials'));
+const Environment = lazy(() => import('components/environment'));
 
 
 const Routes = (props) => {
@@ -23,6 +24,7 @@ const Routes = (props) => {
                         <Route path="/fsbo" render = {()=><Fsbo />} exact/>
                         <Route path="/listing-expired" render = {()=><ListingExpired />} exact/>
                         <Route path="/testimonials" render = {()=><Testimonials />} exact/>
+                        <Route path="/environment" render = {()=><Environment />} exact/>
                     </Switch>
                 </Suspense>
             </BrowserRouter>

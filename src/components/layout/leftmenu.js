@@ -148,7 +148,14 @@ const LeftMenu = (anchor) => {
             title: 'Testimonials', 
             onclick: '/testimonials', 
             useNavi: true
+        },
+        {
+            id: '5',
+            title: 'Vacant Land Environmental Assessment Notice', 
+            onclick: '/environment', 
+            useNavi: true
         }
+        
 
     ])
 
