@@ -19,6 +19,11 @@ const getTestimonials = () =>{
     return {data: testimonials};
 }
 
+const getEnvironment = () =>{
+    var environment = Config.environment;
+    return {data: environment};
+}
+
 const rawBaseQuery = fetchBaseQuery({
     baseUrl: '/'
 });
@@ -28,7 +33,9 @@ const dynamicBaseQuery = async (args, api, extraOptions) =>{
         case 'content-service':
             return getContent(args.name);
         case 'testimonials-service':
-            return getTestimonials();            
+            return getTestimonials();  
+        case 'environment-service':
+            return getEnvironment();                        
         default:
             const adjustedUrl = getBaseUrl(args.service) + args.url;
             const adjustedArgs =  typeof args === 'string' ? adjustedUrl : { ...args, url: adjustedUrl };

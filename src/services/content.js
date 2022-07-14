@@ -23,6 +23,16 @@ export const contentAPI = initSplitApi.injectEndpoints({
                 }
             },
             providesTags: ['testimonials']
+        }),
+        environment: builder.query({
+            query: () => {
+                return {
+                    url: ``,
+                    method: 'GET',
+                    service: 'environment-service'
+                }
+            },
+            providesTags: ['environment']
         })
     }),
     overrideExisting: false
@@ -30,5 +40,6 @@ export const contentAPI = initSplitApi.injectEndpoints({
 
 export const { 
     useContentQuery,
-    useTestimonialsQuery
+    useTestimonialsQuery,
+    useEnvironmentQuery
 } = contentAPI
